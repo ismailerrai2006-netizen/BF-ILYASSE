@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FaresKory - Profile</title>
+
+  <!-- Google Fonts -->
+  <link href="images.jpg" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+
+
+
+body{
+  margin:0;
+  font-family:"Cairo", sans-serif;
+  color:var(--text);
+
+  /* 🔥 الخلفية الجديدة لي عطيتيني 🔥 */
+  background: url("BG.jpg") center/cover no-repeat fixed;
+
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+
+
+
+
+    :root{
+      --bg1:#0f1020;
+      --bg2:#1b1440;
+      --accent:#7c3aed;
+      --accent2:#00d4ff;
+      --text:#e6e6f0;
+      --muted:#a7a7c7;
+      --card:#14162b;
+      --border:#26294a;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:"Cairo", sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(1200px 600px at 10% 10%, rgba(124,58,237,.25), transparent 60%),
+        radial-gradient(800px 400px at 90% 80%, rgba(0,212,255,.25), transparent 60%),
+        linear-gradient(180deg, var(--bg1), var(--bg2));
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:24px;
+    }
+    .profile{
+      width:100%;
+      max-width:880px;
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0)),
+                 var(--card);
+      border:1px solid var(--border);
+      border-radius:20px;
+      box-shadow:0 20px 40px rgba(0,0,0,.35), inset 0 1px 0 rgba(255,255,255,.05);
+      overflow:hidden;
+       }
+
+
+   .cover{
+      height:200px;
+      background:
+        linear-gradient(180deg, rgba(0,0,0,.4), rgba(0,0,0,.2)),
+        url('demon.jpg') center/cover no-repeat;
+      position:relative;
+    }
+
+      
+    .avatar{
+      position:absolute;
+      bottom:-48px;
+      left:24px;
+      width:110px;
+      height:110px;
+      border-radius:50%;
+      border:3px solid rgba(255,255,255,.15);
+      box-shadow:0 10px 25px rgba(0,0,0,.35);
+      background:
+        radial-gradient(circle at 30% 30%, rgba(124,58,237,.5), rgba(0,212,255,.5)),
+        url('bfilyass.jpg') center/cover;
+    }
+    .header{
+      padding:72px 24px 16px 24px;
+      display:flex;
+      align-items:flex-end;
+      gap:16px;
+    }
+    .names{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .names .display{
+      font-size:1.4rem;
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .names .username{
+      color:var(--muted);
+      font-weight:600;
+    }
+    .stats{
+      margin-left:auto;
+      display:flex;
+      align-items:center;
+      gap:12px;
+      background:rgba(124,58,237,.12);
+      border:1px solid rgba(124,58,237,.3);
+      border-radius:12px;
+      padding:8px 12px;
+    }
+    .stat-icon{
+      width:10px;height:10px;border-radius:50%;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      box-shadow:0 0 0 3px rgba(124,58,237,.15);
+    }
+    .stat-text{font-weight:700}
+    .bio{
+      padding:0 24px 20px 24px;
+      color:var(--muted);
+    }
+
+    .sections{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      padding:0 24px 24px 24px;
+    }
+    @media (max-width:720px){
+      .sections{grid-template-columns:1fr}
+      .stat-text{font-size:.95rem}
+    }
+    .card{
+      background:rgba(255,255,255,.02);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:16px;
+      display:flex;
+      gap:14px;
+      align-items:center;
+      transition:transform .15s ease, box-shadow .15s ease, border-color .15s ease;
+    }
+    .card:hover{
+      transform:translateY(-2px);
+      box-shadow:0 12px 24px rgba(0,0,0,.25);
+      border-color:#333a66;
+    }
+    .badge{
+      min-width:44px; height:44px; border-radius:12px;
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      display:flex; align-items:center; justify-content:center;
+      color:#0b0e1a; font-weight:800;
+      font-size:20px;
+      box-shadow:0 8px 16px rgba(124,58,237,.35);
+    }
+    .card-title{
+      font-weight:700;
+      letter-spacing:.2px;
+    }
+    .card-sub{
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer{
+      padding:16px 24px 24px 24px;
+      display:flex; justify-content:flex-end; gap:12px;
+      border-top:1px dashed rgba(255,255,255,.06);
+    }
+    .btn{
+      background:#141a34;
+      color:var(--text);
+      border:1px solid var(--border);
+      padding:10px 14px;
+      border-radius:12px;
+      cursor:pointer;
+      font-weight:600;
+      transition:background .15s ease, border-color .15s ease, transform .15s ease;
+    }
+    .btn.primary{
+      background:linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#0b0e1a;
+      border:none;
+    }
+    .btn:hover{transform:translateY(-1px)}
+  </style>
+</head>
+<body>
+  <main class="profile" aria-label="Social profile">
+    <div class="cover">
+      <div class="avatar" aria-label="Profile avatar"></div>
+    </div>
+
+    <section class="header">
+      <div class="names">
+        <div class"display" > ƁƑ• ＩＬＹＡＳＳ </div>
+        <div class="username">@ƁƑ• ＩＬＹＡＳＳ</div>
+      </div>
+      <div class="stats">
+        <div class="stat-icon"></div>
+        <div class="stat-text"> 1,5K متابع</div>
+      </div>
+    </section>
+
+    <section class="bio">
+      متجر سوشيال ميديا والألعاب — عروض متنوعة، تسليم سريع، دعم على مدار الساعة بيع وشراء حسابات فري فاير
+
+شحن فجميع الألعاب عبر الحساب او بالأيدي 
+
+بيع اكواد فري فاير إن وجدت 
+
+لا أوفر خدمة فالتطبيقات مراهنات
+
+تأمين حسابات جيمايل ضد سحب 
+
+خدمة وساطة .
+    </section>
+
+    <!-- ⭐⭐⭐ أيقونات التواصل ⭐⭐⭐ -->
+<section class="sections">
+
+  <!-- واتساب -->
+  <a href="https://wa.me/212773711688" class="card" target="_blank">
+    <div class="badge"><i class="fa-brands fa-whatsapp"></i></div>
+    <div>
+      <div class="card-title">واتساب</div>
+      <div class="card-sub">تواصل مباشر</div>
+    </div>
+  </a>
+
+  <!-- فيسبوك -->
+  <a href="https://www.facebook.com/bf.ilyass" class="card" target="_blank">
+    <div class="badge"><i class="fa-brands fa-facebook-f"></i></div>
+    <div>
+      <div class="card-title">فيسبوك</div>
+      <div class="card-sub">صفحة رسمية</div>
+    </div>
+  </a>
+
+  <!-- تيليغرام -->
+  <a href="https://t.me/bfilyasstrust" class="card" target="_blank">
+    <div class="badge"><i class="fa-brands fa-telegram"></i></div>
+    <div>
+      <div class="card-title">تيليغرام</div>
+      <div class="card-sub">قناة التحديثات</div>
+    </div>
+  </a>
+
+  <!-- إنستغرام (بدون رابط حالياً) -->
+  <a href="#" class="card">
+    <div class="badge"><i class="fa-brands fa-instagram"></i></div>
+    <div>
+      <div class="card-title">إنستغرام</div>
+      <div class="card-sub">أحدث العروض</div>
+    </div>
+  </a>
+
+  </section>
+</body>
+</html>
